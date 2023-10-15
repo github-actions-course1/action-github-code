@@ -12,3 +12,17 @@ jobs:
         run : |
           node -v
           npm -v  
+  parallel-job-macos:
+    runs-on: macos-latest
+    steps:
+      - name: view sw version 
+        run: sw_vers
+  dependendt-job:
+    runs-on: windows-latest
+    needs: run-shell-commandsw
+    steps: 
+      - name: echo a string
+        run: write-outputs "window sting"
+      - name: error-step
+        run: wrongcommand
+      
