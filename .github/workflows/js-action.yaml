@@ -1,4 +1,4 @@
-name: actions
+name: simple-action-script
 on: [push]
 
 jobs:
