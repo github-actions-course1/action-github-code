@@ -9,3 +9,10 @@ jobs:
         run: echo "::error::Missing semicolon"
       - name : setting an notice message with parms
         run: echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+      - name : setting an error message with parms
+        run: echo "::error file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+      - name : setting an warning message with parms
+        run: echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+
+      
+
