@@ -3,7 +3,7 @@ on: [push]
 
 
 jobs:
-  run-shell-commandsw:
+  run-shell-commands:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
@@ -19,7 +19,7 @@ jobs:
         run: sw_vers
   dependendt-job:
     runs-on: windows-latest
-    needs: run-shell-commandsw
+    needs: run-shell-commands
     steps: 
       - name: echo a string
         run: Write-Output "window sting"
