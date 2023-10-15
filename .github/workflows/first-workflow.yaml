@@ -22,7 +22,7 @@ jobs:
     needs: run-shell-commandsw
     steps: 
       - name: echo a string
-        run: write-outputs "window sting"
+        run: Write-Output "window sting"
       - name: error-step
-        run: wrongcommand
+        run: doesnotexists
       
