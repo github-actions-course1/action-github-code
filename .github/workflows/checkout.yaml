@@ -9,7 +9,7 @@ jobs:
         run : ls -al 
       - uses: actions/checkout@v3
       - name: after action 
-        run : ls - al   
+        run : ls -al   
   checkout-and-display-file:
     runs-on: ubuntu-latest
     steps:
