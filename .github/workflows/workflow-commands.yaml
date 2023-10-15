@@ -13,6 +13,13 @@ jobs:
         run: echo "::error file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
       - name : setting an warning message with parms
         run: echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
-
-      
+      - name: display group logs
+        run : |
+          echo "::group::My group title"
+          echo "Inside group"
+          echo "::endgroup::"
+      - name: Masking a value"
+        run : echo "::add-mask::Secret String"
+      - name: Echo secret
+        run : echo "Secret Sting" 
 
