@@ -1,8 +1,14 @@
 name: workingdirs and shells
 on : [push]
+defaults:
+  run:
+    shell: bash
 jobs:
   display-wd-info:
     runs-on: ubuntu-latest
+    defaults:
+      run: 
+        shell: bash
     steps:
       - name: Display file systems 
         run : |
@@ -11,8 +17,14 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
+      - name: cjhjange the workig dir
+        working-directory: /home/runner
+        run: pwd
   display-wd-info-windows:
     runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
     steps:
       - name: Display file systems 
         run : |
